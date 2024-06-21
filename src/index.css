@@ -1,0 +1,27 @@
+/* IMPORT OPEN SANS FONT */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to bottom, #00152b, #001d3d);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* page center */
+.page-center {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.nav-center {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
