@@ -20,6 +20,14 @@ body {
   margin: auto;
 }
 
+.section-center {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 .nav-center {
   width: 100%;
   max-width: 1400px;
