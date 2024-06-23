@@ -2,41 +2,44 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 import { IoLocationOutline } from "react-icons/io5";
 
-// secondary color: #b0c4de
+// import heroImg
+const heroImg = "src/assets/Website Maintenance - 640x478.png";
+
 // primary color: text-slate-300
+// secondary color: #b0c4de
 // for my name el: #8bc34a
 
 function Hero() {
   return (
-    <section className="section-center md:flex md:justify-between pt-16">
-      <div className="text-[#b0c4de] md:px-2">
+    <section className="section-center mt-32 h-[65vh] md:h-[85vh] md:mt-0 md:mb-0 flex justify-between md:items-center">
+      <div className="text-[#b0c4de]">
         <h2 className="text-xl md:text-2xl mb-0 md:mb-0.5">Hello,</h2>
-        <h2 className="text-2xl md:text-4xl mb-2 md:mb-2">
+        <h2 className="text-3xl md:text-5xl mb-2 md:mb-2">
           I am <span className="text-[#8bc34a] font-semibold">Lakhan</span>,
         </h2>
 
         {/* FOR SMALL SCREENS */}
-        <div className="min-h-[90px] md:hidden  text-slat-300">
+        <div className="min-h-[100px] md:hidden">
           <ReactTyped
             strings={["I'm a Front End Developer"]}
             typeSpeed={40}
-            className="md:hidden text-4xl font-bold w-full"
+            className="md:hidden text-5xl font-bold w-full"
           />
         </div>
 
         {/* FOR LARGE SCREENS */}
-        <div className="hidden md:inline-block  text-slat-300">
+        <div className="hidden md:inline-block">
           <ReactTyped
-            strings={["I build responsive websites", "Front End Developer"]}
+            strings={["I build websites", "Front End Developer"]}
             typeSpeed={40}
-            className="text-5xl font-bold w-full hidden md:inline-block "
+            className="text-6xl font-bold w-full hidden md:inline-block "
           />
         </div>
 
-        <p className="hidden md:block max-w-[50%] mt-4 px-1">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
-          ad quos reprehenderit et voluptates nisi commodi distinctio blanditiis
-          qui consectetur?
+        <p className="hidden md:block max-w-[70%] mt-4">
+          Welcome to my portfolio! I am delighted to have you here. I specialize
+          in building responsive websites. Feel free to explore my work below.
+          Thank you for visiting!
         </p>
 
         <p className="mt-4 md:mt-4 text-[#b0c4de] flex items-center gap-1">
@@ -46,13 +49,15 @@ function Hero() {
           <span className="text-md md:text-md">Bengaluru, India</span>
         </p>
 
-        <div className="mt-5 md:mt-5 px-1">
+        <div className="mt-5 md:mt-5">
           <button className="ring-1 ring-slate-400 text-slate-300 px-5 py-1 capitalize rounded-md text-xl">
             projects
           </button>
         </div>
       </div>
-      <div className="hidden md:block">right</div>
+      <div className="hidden lg:block">
+        <img src={heroImg} alt="hero img not found" />
+      </div>
     </section>
   );
 }
