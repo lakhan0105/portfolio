@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, Navbar, Skills } from "./Components";
+import { Hero, Navbar, Projects, Skills } from "./Components";
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
 
       <main>
         <Hero />
-        <Skills/>
+        <Skills />
+        <Projects />
       </main>
     </div>
   );
