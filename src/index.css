@@ -9,6 +9,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   background: linear-gradient(to bottom, #00152b, #001d3d);
+  background-size: cover;
   color: #e0e0e0;
   min-height: 100vh;
 }

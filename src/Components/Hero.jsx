@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 import { IoLocationOutline } from "react-icons/io5";
 
 // import heroImg
-const heroImg = "src/assets/Website Maintenance - 640x478.png";
+const heroImg = "src/assets/Website-Maintenance-640x478.webp";
 
 // primary color: text-slate-300
 // secondary color: #b0c4de
@@ -11,7 +11,10 @@ const heroImg = "src/assets/Website Maintenance - 640x478.png";
 
 function Hero() {
   return (
-    <section className="section-center mt-32 h-[65vh] md:h-[85vh] md:mt-0 md:mb-0 flex justify-between md:items-center">
+    <section
+      id="home"
+      className="section-center mt-32 h-[65vh] md:h-[85vh] md:mt-0 md:mb-0 flex justify-between md:items-center"
+    >
       <div className="text-[#b0c4de]">
         <h2 className="text-xl md:text-2xl mb-0 md:mb-0.5">Hello,</h2>
         <h2 className="text-3xl md:text-5xl mb-2 md:mb-2">
@@ -30,7 +33,7 @@ function Hero() {
         {/* FOR LARGE SCREENS */}
         <div className="hidden md:inline-block">
           <ReactTyped
-            strings={["I build websites", "Front End Developer"]}
+            strings={["I build web apps", "Front End Developer"]}
             typeSpeed={40}
             className="text-6xl font-bold w-full hidden md:inline-block "
           />

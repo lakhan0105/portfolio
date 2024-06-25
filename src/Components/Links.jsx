@@ -9,12 +9,14 @@ const data = [
 
 function Links() {
   return (
-    <ul className="flex gap-3">
+    <ul className="flex gap-5">
       {data.map((item) => {
-        const { linkName, path } = item;
+        const { linkName } = item;
         return (
-          <li className="capitalize cursor-pointer">
-            <Link to={linkName} smooth duration={500}>{linkName}</Link>
+          <li className="capitalize cursor-pointer text-md hover:text-lime-200/[0.9]">
+            <Link to={linkName} smooth duration={500}>
+              {linkName}
+            </Link>
           </li>
         );
       })}

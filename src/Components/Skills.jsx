@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "devicon/devicon.min.css";
 import { motion } from "framer-motion";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import SectionHeading from "./SectionHeading";
 
 const skillsData = [
   { icon: "html5" },
@@ -15,12 +16,14 @@ const skillsData = [
 function Skills() {
   const [showArrow, setShowArrow] = useState(true);
 
+  // handleScroll
   function handleScroll() {
     if (window.scrollY > 20) {
       setShowArrow(false);
     }
   }
 
+  // useEffect to hide the arrow when scrolled down
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -40,15 +43,7 @@ function Skills() {
         </motion.div>
       )}
 
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        id="skills"
-        className="capitalize text-3xl font-semibold text-center mb-8"
-      >
-        technical skills
-      </motion.h2>
+      <SectionHeading sectionName={"technical skills"} sectionId={"skills"} />
 
       <div className="w-full grid grid-cols-3 place-items-center gap-4 md:max-w-[80%] md:mx-auto md:flex md:justify-evenly flex-wrap md:gap-6">
         {skillsData.map((item) => {
