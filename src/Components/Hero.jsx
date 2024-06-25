@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 import { IoLocationOutline } from "react-icons/io5";
 
 // import heroImg
-const heroImg = "src/assets/Website-Maintenance-640x478.webp";
+import heroImg from "../assets/Website-Maintenance-640x478.webp";
 
 // primary color: text-slate-300
 // secondary color: #b0c4de

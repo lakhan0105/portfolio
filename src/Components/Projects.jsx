@@ -3,12 +3,15 @@ import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import SectionHeading from "./SectionHeading";
 
+import blogAppImg from "../assets/project-imgs/blog-app.webp";
+import eventBookingAppImg from "../assets/project-imgs/event-booking-app.webp";
+
 const projects = [
   {
     title: "Blogs app",
     description:
       "Write, save, and manage blog posts with an integrated text editor, featuring image uploads, categorization, and user authentication for personalized content management.",
-    imageUrl: "src/assets/project-imgs/blog-app.webp",
+    imageUrl: blogAppImg,
     tech: ["react", "tailwindcss", "appwrite", "css", "html", "js"],
     demoLink: "https://blog-scribe.netlify.app",
     codeLink: "https://github.com/lakhan0105/BlogScribe",
@@ -17,7 +20,7 @@ const projects = [
     title: "Event booking app",
     description:
       "Platform designed to simplify the process of booking products for various events. Users can browse, check availability, and book essential items like sound systems, tents, and lighting.",
-    imageUrl: "src/assets/project-imgs/event-booking-app.webp",
+    imageUrl: eventBookingAppImg,
     tech: ["react", "tailwindcss", "appwrite", "css", "html", "js"],
     demoLink: "https://projectone.demo",
     codeLink: "https://github.com/username/projectone",
