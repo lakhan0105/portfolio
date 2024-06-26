@@ -17,13 +17,13 @@ const projects = [
     codeLink: "https://github.com/lakhan0105/BlogScribe",
   },
   {
-    title: "Event booking app",
+    title: "Products Renting app",
     description:
       "Platform designed to simplify the process of booking products for various events. Users can browse, check availability, and book essential items like sound systems, tents, and lighting.",
     imageUrl: eventBookingAppImg,
     tech: ["react", "tailwindcss", "appwrite", "css", "html", "js"],
-    demoLink: "https://projectone.demo",
-    codeLink: "https://github.com/username/projectone",
+    demoLink: "https://renting-for-events.netlify.app/",
+    codeLink: "https://github.com/lakhan0105/eventPlanner",
   },
   // Add more projects here
 ];
