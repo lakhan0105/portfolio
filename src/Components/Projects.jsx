@@ -45,7 +45,7 @@ function Projects() {
               className="w-full h-full mx-auto flex flex-col md:flex-row md:items-start md:gap-5 md:odd:flex-row-reverse mb-20 md:mb-28"
             >
               {/* IMAGE */}
-              <div className="w-full md:w-[60%] grid place-items-center self-center relative">
+              <div className="w-full md:w-[60%] relative">
                 <img
                   src={imageUrl}
                   alt="not found"
@@ -78,18 +78,27 @@ function Projects() {
 
                 {/* LINKS */}
                 <div className="mt-4 flex flex- items-center gap-3">
-                  <a
+                  <motion.a
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
                     href={demoLink}
                     className="inline-block text-md ring-cyan-100 px-3 py-1 rounded hover:bg-[#0080ff] bg-[#007bfff5] text-white"
                   >
                     live demo
-                  </a>
+                  </motion.a>
 
-                  <a href={codeLink} className="flex items-center gap-1">
+                  <motion.a
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    href={codeLink}
+                    className="flex items-center gap-1"
+                  >
                     <span className="text-2xl text-white">
                       <FaGithub />
                     </span>
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </motion.article>

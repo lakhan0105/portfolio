@@ -8,7 +8,7 @@ function SectionHeading({ sectionName, sectionId }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       id={sectionId}
-      className="capitalize text-3xl font-semibold text-center mb-8"
+      className="capitalize text-cyan-200 text-3xl font-semibold text-center mb-8"
     >
       {sectionName}
     </motion.h2>
