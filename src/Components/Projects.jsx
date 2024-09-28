@@ -5,8 +5,17 @@ import SectionHeading from "./SectionHeading";
 
 import blogAppImg from "../assets/project-imgs/blog-app.webp";
 import eventBookingAppImg from "../assets/project-imgs/event-booking-app.webp";
+import msfitnessImg from "../assets/project-imgs/ms-fitness.webp";
 
 const projects = [
+  {
+    title: "MS Fitness",
+    description: "Web app for a gym",
+    imageUrl: msfitnessImg,
+    tech: ["react", "tailwindcss", "css", "html", "js"],
+    demoLink: "https://ms-fitness.netlify.app",
+    codeLink: "https://github.com/lakhan0105/gym-website",
+  },
   {
     title: "Blogs app",
     description:
