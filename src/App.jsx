@@ -10,7 +10,7 @@ function App() {
 
       <main>
         <Hero />
-        <Skills />
+        {/* <Skills /> */}
         <Projects />
       </main>
     </div>
