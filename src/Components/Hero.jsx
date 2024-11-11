@@ -9,10 +9,10 @@ import heroImg from "../assets/lakhan3.png";
 function Hero() {
   return (
     <section id="home" className="section-center">
-      <div className="flex justify-center gap-16 items-start mt-[170px] mb-[140px]">
+      <div className="px-5 md:px-0 flex justify-center gap-16 items-start mt-[170px] mb-[140px]">
         {/* left */}
         <div className="text-white/90 mt-2">
-          <h2 className="text-5xl font-semibold">Hello, I'm</h2>
+          <h2 className="text-4xl md:text-5xl font-semibold">Hello, I'm</h2>
           <h3 className="text-5xl mt-2 font-bold">
             a <span className="text-cyan-500">Front End Developer</span>
           </h3>

@@ -83,7 +83,7 @@ function Projects() {
         ></SectionHeading>
 
         {/* cards container */}
-        <div className="grid grid-cols-3 gap-8 mb-20 content-center	">
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-8 mb-20 content-center	px-10">
           {projects.map((item, index) => {
             const {
               title,
@@ -97,7 +97,7 @@ function Projects() {
             return (
               <article
                 key={index}
-                className="rounded-lg overflow-hidden max-w-[350px] bg-[#27272A] backdrop-blur-xl"
+                className="rounded-lg overflow-hidden w-full md:max-w-[350px] bg-[#27272A] backdrop-blur-xl"
               >
                 {/* TOP (image container) */}
                 <div className="w-full h-[200px]">
