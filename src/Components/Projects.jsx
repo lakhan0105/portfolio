@@ -1,36 +1,72 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa6";
 import SectionHeading from "./SectionHeading";
+import { IoCheckmarkCircleSharp } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaJs } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
 
 import blogAppImg from "../assets/project-imgs/blog-app.webp";
 import eventBookingAppImg from "../assets/project-imgs/event-booking-app.webp";
 import msfitnessImg from "../assets/project-imgs/ms-fitness.webp";
+import { SiAppwrite } from "react-icons/si";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "MS Fitness",
-    description: "Web app for a gym",
+    title: "MS Fitness ",
+    description:
+      "A gym management app with an admin dashboard for tracking 500+ users memberships, search functionality, and secure, admin-only access.",
     imageUrl: msfitnessImg,
-    tech: ["react", "tailwindcss", "css", "html", "js"],
+    tech: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <FaHtml5 />,
+      <FaJs />,
+      <SiAppwrite />,
+    ],
+    bulletPoints: [
+      "admin dashboard with 500+ records",
+      "membership tracking & search feature",
+      "only authorized staff can access data",
+    ],
     demoLink: "https://ms-fitness.netlify.app",
     codeLink: "https://github.com/lakhan0105/gym-website",
   },
   {
     title: "Blogs app",
     description:
-      "Write, save, and manage blog posts with an integrated text editor, featuring image uploads, categorization, and user authentication for personalized content management.",
+      "Create and organize blog posts with an editor that supports image uploads, categorization, and secure user authentication.",
     imageUrl: blogAppImg,
-    tech: ["react", "tailwindcss", "appwrite", "css", "html", "js"],
+    tech: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <FaHtml5 />,
+      <FaJs />,
+      <SiAppwrite />,
+    ],
+    bulletPoints: [
+      "Integrated text editor with image upload",
+      "Categorize posts for content management",
+      "Secure user authentication",
+    ],
     demoLink: "https://blog-scribe.netlify.app",
     codeLink: "https://github.com/lakhan0105/BlogScribe",
   },
   {
     title: "Products Renting app",
     description:
-      "Platform designed to simplify the process of booking products for various events. Users can browse, check availability, and book essential items like sound systems, tents, and lighting.",
+      "A streamlined platform for booking event essentials, allowing users to browse, check availability, and reserve items like sound systems, tents, and lighting.",
     imageUrl: eventBookingAppImg,
-    tech: ["react", "tailwindcss", "appwrite", "css", "html", "js"],
+    tech: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <FaHtml5 />,
+      <FaJs />,
+      <SiAppwrite />,
+    ],
+    bulletPoints: [],
     demoLink: "https://renting-for-events.netlify.app/",
     codeLink: "https://github.com/lakhan0105/eventPlanner",
   },
@@ -39,82 +75,87 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="section-center mt-16 text-[#b0c4de]">
-      <div className="w-full mx-auto flex flex-col justify-center relative">
-        <SectionHeading sectionName={"projects"} sectionId={"projects"} />
+    <section className="section-center mt-10">
+      <div>
+        <SectionHeading
+          sectionName={"Recent projects"}
+          sectionId={"projects"}
+        ></SectionHeading>
 
-        {projects.map((project) => {
-          const { title, description, imageUrl, demoLink, codeLink, tech } =
-            project;
-          return (
-            <motion.article
-              initial={{ opacity: 0, y: 70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="w-full h-full mx-auto flex flex-col md:flex-row md:items-start md:gap-5 md:odd:flex-row-reverse mb-20 md:mb-28"
-            >
-              {/* IMAGE */}
-              <div className="w-full md:w-[60%] relative">
-                <img
-                  src={imageUrl}
-                  alt="not found"
-                  className="w-full h-full rounded object-cover"
-                />
-              </div>
-
-              {/* INFO */}
-              <div className="w-full md:w-[40%] md:h-full mt-4 md:mt-0 rounded ">
-                <h2 className="text-4xl font-semibold text-cyan-100 mb-2">
-                  {title}
-                </h2>
-                <p className="text-sm mb-4">{description}</p>
-
-                {/* TECH STACKS */}
-                <div className="flex flex-wrap gap-2 max-w-[60%] relative mb-4">
-                  {tech?.map((item) => {
-                    return (
-                      <motion.button
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="ring-1 ring-lime-50/[0.7] px-2 text-sm capitalize rounded mb-1 text-lime-200/[0.9] hover:ring-2 hove:ring-lime-50/[1] hover:text-lime-200/[1] "
-                      >
-                        {item}
-                      </motion.button>
-                    );
-                  })}
+        {/* cards container */}
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-8 mb-20 content-center	px-10">
+          {projects.map((item, index) => {
+            const {
+              title,
+              imageUrl,
+              bulletPoints,
+              description,
+              tech,
+              demoLink,
+              codeLink,
+            } = item;
+            return (
+              <article
+                key={index}
+                className="rounded-lg overflow-hidden w-full md:max-w-[350px] bg-[#27272A] backdrop-blur-xl"
+              >
+                {/* TOP (image container) */}
+                <div className="w-full h-[200px]">
+                  <img
+                    src={imageUrl}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* LINKS */}
-                <div className="mt-4 flex flex- items-center gap-3">
-                  <motion.a
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                    href={demoLink}
-                    className="inline-block text-md ring-cyan-100 px-3 py-1 rounded hover:bg-[#0080ff] bg-[#007bfff5] text-white"
-                  >
-                    live demo
-                  </motion.a>
+                {/* BOTTOM */}
+                <div className="pt-5 pb-6 px-3 text-white/80">
+                  <h2 className="text-2xl mb-2.5 font-semibold tracking-wide">
+                    {title}
+                  </h2>
 
-                  <motion.a
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                    href={codeLink}
-                    className="flex items-center gap-1"
-                  >
-                    <span className="text-2xl text-white">
-                      <FaGithub />
-                    </span>
-                  </motion.a>
+                  <p className="text tracking-wide text-zinc-400 leading-relaxed">
+                    {description}
+                  </p>
+
+                  {/* tech stack */}
+                  <ul className="flex mt-4 mb-7 items-center justify-start gap-4 text-zinc-400 pl-0.5 text-sm">
+                    {tech.map((item, index) => {
+                      return (
+                        <li key={index} className="hover:text-zinc-300">
+                          {item}
+                        </li>
+                      );
+                    })}
+                  </ul>
+
+                  {/* buttons container */}
+                  <div className="text-zinc-200 flex items-center gap-4">
+                    <a href={demoLink} alt="project link not found">
+                      <button className="ring-1 bg-blue-600 hover:bg-blue-600/90 px-3 py-1.5 rounded text-sm flex gap-1.5 ">
+                        <span className="pt-0.5">
+                          <FaExternalLinkAlt />
+                        </span>
+                        view
+                      </button>
+                    </a>
+
+                    <a href={codeLink} alt="code link not found">
+                      <button className="flex gap-1.5 rounded ring-1 ring-zinc-400/50 hover:ring-zinc-400/60 text-zinc-300 hover:text-zinc-200 py-1 px-3">
+                        <span className="pt-1">
+                          <FaGithub />
+                        </span>{" "}
+                        code
+                      </button>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </motion.article>
-          );
-        })}
+              </article>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
